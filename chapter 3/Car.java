@@ -23,8 +23,8 @@ public class Car
      */
     public Car( double fuelEfficiency)
     {
-        fuelInTank = 0.0;
-        fueEfficiency = fuelEfficiency;
+        this.fuelInTank = 0.0;
+        this.fueEfficiency = fuelEfficiency;
         
         // initialise instance variables
     }
@@ -40,6 +40,7 @@ public class Car
      */
     public void drive(double distance)
     {
+        double gas = this.getGasInTank();
         fuelInTank -= distance / fueEfficiency;
     }
     
@@ -54,7 +55,8 @@ public class Car
         // put your code here
         return fuelInTank;
     }
-    
+    
+
     /**
      * Increments the fuel stored in the car's tank by the specified amount in gallons.
      *
