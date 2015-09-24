@@ -2,9 +2,9 @@
 
 /**
  * Write a description of class Vending here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This class is vending machine, capacity of machine is 100, can let user takeout cans and insert cans
+ * @author (Heng Li) 
+ * @version (9/21/2015)
  */
 public class Vending
 {
@@ -29,19 +29,29 @@ public class Vending
         if (num >= 0)
         {
             number += num + inside;
-            if (number <= 100)
+            if (inside == MAX)
             {
-                inside += number;
+                System.out.println("This Vending Machine is already full filled");
+                this.errorsfill();
             }
             else
             {
-                System.out.println("The max capacity of this iVending iMachine is 100, but don't worry iVending iMachine already took what it needs!");
-                inside += 100 - num;
+                if (number <= MAX)
+                {
+                    inside = number;
+                }
+                else
+                {
+                    System.out.println("The max capacity of this iVending iMachine is 100, but don't worry iVending iMachine already took what it needs!");
+                    inside = MAX;
+            
+                }
             }
         }
         else
         {
             System.out.println("Putting a negative number means take out, but you can't take the soda without paying money. so try again with a positive number!");
+            this.errorsfill();
         }
     }
     public void insertToken(int takes)
@@ -52,17 +62,38 @@ public class Vending
         {
             if (numtake == 0)
             {
-             
+                System.out.println("Really? ZERO???");
+                this.errorsout();
             }
             else
             {
-                
+                if (numtake <= inside)
+                {
+                    inside -= numtake;
+                }
+                else
+                {
+                    System.out.println("you can't take more than I have");
+                }
             }
         }
+        else
+        {
+            System.out.println("You can't have a negative number");
+            this.errorsout();
+        }
         
-        
-        
-        
-        
+    }
+    public int getinside()
+    {
+        return inside;
+    }
+  public void errorsfill()
+  {
+      this.fillup();
+  }
+  public void errorsout()
+  {
+      this.insertToken();
     }
 }
