@@ -18,9 +18,9 @@ public class Building
     private int ypos;
     private int numfloor;
     private final int FLPX = 30;
-    private final int WIPX = 20;
     private final int BWIDE = 40;
     private final int WIN = 10;
+    private final int WIPX = 20;
 
     public Building(int x, int y, int num)
     {
@@ -33,9 +33,21 @@ public class Building
 
     public void draw(Graphics2D g2)
     {
-        int top = numfloor * FLPX;
+        int height = numfloor * FLPX;
         
-        Rectangle rect = new Rectangle(xpos,ypos);
+        Rectangle rect = new Rectangle(xpos,ypos,BWIDE,height);
+        g2.setColor(Color.BLUE);
+        g2.draw(rect);
+        g2.fill(rect);
+        int windows = numfloor *2;
+        int num = 0;
+        int wiy = 0;
+        while (num< numfloor)
+        {
+            wiy +=10;
+            
+        }
+        
         
         
 

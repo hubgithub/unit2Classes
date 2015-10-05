@@ -24,6 +24,7 @@ public class Car
 
         Point2D.Double r1 = new Point2D.Double(xLeft + 10, yTop + 10);
 
+        
         Point2D.Double r2 = new Point2D.Double(xLeft + 20, yTop);
 
         Point2D.Double r3 = new Point2D.Double(xLeft + 40, yTop);
