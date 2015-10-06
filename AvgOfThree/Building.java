@@ -36,6 +36,7 @@ public class Building
         int height = numfloor * FLPX;
         
         Rectangle rect = new Rectangle(xpos,ypos,BWIDE,height);
+        
         g2.setColor(Color.BLUE);
         g2.draw(rect);
         g2.fill(rect);
