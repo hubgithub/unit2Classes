@@ -12,7 +12,7 @@ public class Building
     private int xpos;
     private int ypos;
     private int numfloor;
-    private final int FLPX = 30;
+    private final int FLPX = 10;
     private final int BWIDE = 80;
 
 
@@ -31,9 +31,11 @@ public class Building
         
         Rectangle rect = new Rectangle(xpos,ypos,BWIDE,height);
         
-        g2.setColor(Color.BLUE);
+        g2.setColor(Color.gray);
         g2.draw(rect);
         g2.fill(rect);
+        
+        
 
 
     }

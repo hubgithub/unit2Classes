@@ -13,7 +13,11 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    Building building = new Building(400,300,30);
+    Building building = new Building(200,300,30);
+    Building building2 = new Building(290,200,40);
+    Building building3 = new Building(110,100,50);
+    Building building4 = new Building(20,400,20);
+    Building building5 = new Building(380,140,42);
     
     
     
@@ -34,7 +38,10 @@ public class CityscapeComponent extends JComponent
         // invoke the draw method on each object in your Cityscape
         // ...
         building.draw(g2);
-        
+        building2.draw(g2);
+        building3.draw(g2);
+        building4.draw(g2);
+        building5.draw(g2);
         
     }
     
@@ -44,7 +51,7 @@ public class CityscapeComponent extends JComponent
      */
     public void nextFrame()
     {
-        // update the objects in the cityscape so they are animated
+        // update the objects in the cityscape so they are animated0
         // ...
         
         
