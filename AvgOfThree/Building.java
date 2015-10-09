@@ -33,7 +33,25 @@ public class Building
 
     public void draw(Graphics2D g2)
     {
+<<<<<<< HEAD
         int top = numfloor * FLPX;
+=======
+        int height = numfloor * FLPX;
+        
+        Rectangle rect = new Rectangle(xpos,ypos,BWIDE,height);
+        
+        g2.setColor(Color.BLUE);
+        g2.draw(rect);
+        g2.fill(rect);
+        int windows = numfloor *2;
+        int num = 0;
+        int wiy = 0;
+        while (num< numfloor)
+        {
+            wiy +=10;
+            
+        }
+>>>>>>> origin/master
         
         Rectangle rect = new Rectangle(xpos,ypos);
         

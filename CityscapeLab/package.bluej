@@ -5,6 +5,7 @@ dependency1.type=UsesDependency
 dependency2.from=CityscapeComponent
 dependency2.to=Building
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency3.from=CityscapeComponent
 dependency3.to=Sun
 dependency3.type=UsesDependency
@@ -14,14 +15,24 @@ dependency4.type=UsesDependency
 dependency5.from=CityscapeComponent
 dependency5.to=White
 dependency5.type=UsesDependency
+=======
+>>>>>>> origin/master
 objectbench.height=100
 objectbench.width=658
 package.editor.height=400
+<<<<<<< HEAD
 package.editor.width=560
 package.editor.x=1148
 package.editor.y=181
 package.numDependencies=5
 package.numTargets=7
+=======
+package.editor.width=570
+package.editor.x=564
+package.editor.y=250
+package.numDependencies=2
+package.numTargets=3
+>>>>>>> origin/master
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -31,8 +42,13 @@ readme.editor.x=0
 readme.editor.y=22
 target1.editor.height=700
 target1.editor.width=900
+<<<<<<< HEAD
 target1.editor.x=70
 target1.editor.y=152
+=======
+target1.editor.x=898
+target1.editor.y=0
+>>>>>>> origin/master
 target1.height=50
 target1.name=Building
 target1.naviview.expanded=true
@@ -40,12 +56,21 @@ target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
+<<<<<<< HEAD
 target1.x=450
 target1.y=270
 target2.editor.height=700
 target2.editor.width=900
 target2.editor.x=386
 target2.editor.y=243
+=======
+target1.x=330
+target1.y=210
+target2.editor.height=700
+target2.editor.width=900
+target2.editor.x=0
+target2.editor.y=315
+>>>>>>> origin/master
 target2.height=50
 target2.name=CityscapeViewer
 target2.naviview.expanded=false
@@ -53,6 +78,7 @@ target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
 target2.width=130
+<<<<<<< HEAD
 target2.x=0
 target2.y=270
 target3.editor.height=700
@@ -117,3 +143,20 @@ target7.typeParameters=
 target7.width=160
 target7.x=250
 target7.y=320
+=======
+target2.x=80
+target2.y=110
+target3.editor.height=700
+target3.editor.width=900
+target3.editor.x=591
+target3.editor.y=1
+target3.height=50
+target3.name=CityscapeComponent
+target3.naviview.expanded=false
+target3.showInterface=false
+target3.type=ClassTarget
+target3.typeParameters=
+target3.width=160
+target3.x=370
+target3.y=80
+>>>>>>> origin/master

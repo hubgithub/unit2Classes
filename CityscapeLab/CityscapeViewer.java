@@ -24,7 +24,11 @@ public class CityscapeViewer
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
+<<<<<<< HEAD
         frame.setSize(1100 /* x */, 1000 /* y */);
+=======
+        frame.setSize(1100 /* x */, 800 /* y */);
+>>>>>>> origin/master
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBackground(Color.blue);
