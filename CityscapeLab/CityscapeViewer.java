@@ -3,6 +3,7 @@ import java.awt.Color;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Scanner;
 
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
@@ -24,22 +25,22 @@ public class CityscapeViewer
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
-<<<<<<< HEAD
+
         frame.setSize(1100 /* x */, 1000 /* y */);
-=======
-        frame.setSize(1100 /* x */, 800 /* y */);
->>>>>>> origin/master
+
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBackground(Color.blue);
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
+         Scanner scan = new Scanner(System.in);
+         System.out.print ("What's the weather? (cloudy , sunny): ");
+         String weather = scan.next();
         
         
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
+        CityscapeComponent component = new CityscapeComponent(weather);
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the

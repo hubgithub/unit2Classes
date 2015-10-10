@@ -13,7 +13,7 @@ public class Building
     private int ypos;
     private int numfloor;
     private final int FLPX = 10;
-<<<<<<< HEAD
+
     private int bwide;
 
 
@@ -22,16 +22,9 @@ public class Building
         xpos = x;
         ypos = y;
         bwide = wide;
-=======
-    private final int BWIDE = 80;
 
 
-    public Building(int x, int y, int num)
-    {
-        xpos = x;
-        ypos = y;
-        
->>>>>>> origin/master
+
         numfloor = num;
     }
 
@@ -39,12 +32,9 @@ public class Building
     public void draw(Graphics2D g2)
     {
         int height = numfloor * FLPX;
-        
-<<<<<<< HEAD
+
         Rectangle rect = new Rectangle(xpos,ypos,bwide,height);
-=======
-        Rectangle rect = new Rectangle(xpos,ypos,BWIDE,height);
->>>>>>> origin/master
+
         
         g2.setColor(Color.gray);
         g2.draw(rect);
@@ -55,8 +45,5 @@ public class Building
 
     }
 
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/master
