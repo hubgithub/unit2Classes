@@ -34,8 +34,8 @@ public class CityscapeViewer
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
          Scanner scan = new Scanner(System.in);
-         System.out.print ("What's the weather? (cloudy , sunny): ");
-         String weather = scan.next();
+         System.out.print ("How many cloud do you want in the sky? : ");
+         int weather = scan.nextInt();
         
         
         

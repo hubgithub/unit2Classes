@@ -11,12 +11,12 @@ public class Cloud
     private int xpos;
     private int ypos;
     private int ra;
-    private String weather = "";
+    private int weather;
 
     /**
      * Constructor for objects of class Cloud
      */
-    public Cloud(String weat)
+    public Cloud(int weat)
     {
         // initialise instance variables
         weather = weat;
@@ -33,46 +33,39 @@ public class Cloud
     {
         // put your code here
 
-        if (weather == "sunny")
-        {
+       int num = 0;
+       Random rand = new Random();
+       int numx;
+       int numy;
+       while (num < weather)
+       {
+           num += 1;
+           numx = rand.nextInt(1080);
+           numy = rand.nextInt(350);
+           xpos = numx;
+           ypos = numy;
+           
+           Ellipse2D cloud = new Ellipse2D.Double(xpos,ypos,ra,ra);
+           g2.setColor(Color.white);
+           g2.draw(cloud);
+           g2.fill(cloud);
+           
+           Ellipse2D cloud2 = new Ellipse2D.Double(xpos + 15,ypos - 15,ra,ra);
+           g2.setColor(Color.white);
+           g2.draw(cloud2);
+           g2.fill(cloud2);
+           
+           Ellipse2D cloud3 = new Ellipse2D.Double(xpos + 15,ypos,ra,ra);
+           g2.setColor(Color.white);
+           g2.draw(cloud3);
+           g2.fill(cloud3);
+           
+           Ellipse2D cloud4 = new Ellipse2D.Double(xpos + 30 ,ypos,ra,ra);
+           g2.setColor(Color.white);
+           g2.draw(cloud4);
+           g2.fill(cloud4);
         }
         
-        else
-        {
-
-          int num = 0;
-           Random rand = new Random();
-           int numx;
-           int numy;
-           while (num < 10)
-           {
-               num += 1;
-               numx = rand.nextInt(1080);
-               numy = rand.nextInt(350);
-               xpos = numx;
-               ypos = numy;
-               
-               Ellipse2D cloud = new Ellipse2D.Double(xpos,ypos,ra,ra);
-               g2.setColor(Color.white);
-               g2.draw(cloud);
-               g2.fill(cloud);
-               
-               Ellipse2D cloud2 = new Ellipse2D.Double(xpos + 15,ypos - 15,ra,ra);
-               g2.setColor(Color.white);
-               g2.draw(cloud2);
-               g2.fill(cloud2);
-               
-               Ellipse2D cloud3 = new Ellipse2D.Double(xpos + 15,ypos,ra,ra);
-               g2.setColor(Color.white);
-               g2.draw(cloud3);
-               g2.fill(cloud3);
-               
-               Ellipse2D cloud4 = new Ellipse2D.Double(xpos + 30 ,ypos,ra,ra);
-               g2.setColor(Color.white);
-               g2.draw(cloud4);
-               g2.fill(cloud4);
-            }
-            
         }
     }
-}
+

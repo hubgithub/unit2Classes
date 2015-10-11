@@ -20,7 +20,12 @@ public class Sun
         ypos = y;
         radius = ra;
     }
+    public void update(int sunx,int suny)
+    {
+        xpos = sunx;
+        ypos = suny;
 
+    }
 
     public void draw(Graphics2D g2)
     {
@@ -30,5 +35,14 @@ public class Sun
         g2.draw(sun);
         g2.fill(sun);
         
+    }
+    
+    public int getxpos()
+    {
+        return xpos;
+    }
+    public int getypos()
+    {
+        return ypos;
     }
 }
