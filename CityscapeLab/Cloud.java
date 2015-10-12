@@ -37,6 +37,7 @@ public class Cloud
        Random rand = new Random();
        int numx;
        int numy;
+
        while (num < weather)
        {
            num += 1;

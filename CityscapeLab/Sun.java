@@ -10,6 +10,7 @@ public class Sun
     private int xpos;
     private int ypos;
     private int radius;
+    static private int num;
 
     /**
      * Constructor for objects of class Sun
@@ -19,14 +20,26 @@ public class Sun
         xpos = x;
         ypos = y;
         radius = ra;
+        num = 0;
     }
-    public void update(int sunx,int suny)
+    public void update(int n)
     {
-        xpos = sunx;
-        ypos = suny;
 
-    }
+        num = n;
+            
+        if (num< 30)
+        {
+            xpos -= 18;
+            ypos -= 7;
 
+        }
+        else
+        {
+            xpos -= 18;
+            ypos += 7;
+
+        }
+        }
     public void draw(Graphics2D g2)
     {
         Ellipse2D sun = new Ellipse2D.Double(xpos,ypos,radius,radius);
@@ -46,3 +59,6 @@ public class Sun
         return ypos;
     }
 }
+
+
+    

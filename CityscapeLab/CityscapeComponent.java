@@ -14,13 +14,9 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    private int weather;
+    static private int weather;
+    static private int n;
     
-    public CityscapeComponent(int weat)
-    {
-        weather = weat;
-        
-    }
     
     
     private int sunx = 1050;
@@ -36,13 +32,20 @@ public class CityscapeComponent extends JComponent
     
     Road road = new Road(0,805,1100,60);
     White white = new White();
+    public CityscapeComponent(int weat)
+    {
+        weather = weat;
+        n = 0;
+        
+    }
+    
 
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     
-    Cloud cloud = new Cloud(weather);
+    
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -55,6 +58,7 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         // ...
+
         backg.draw(g2);
         building.draw(g2);
         building2.draw(g2);
@@ -66,7 +70,9 @@ public class CityscapeComponent extends JComponent
         sun.draw(g2);
         road.draw(g2);
         white.draw(g2);
+        Cloud cloud = new Cloud(weather);
         cloud.draw(g2);
+        
 
         
     }
@@ -79,26 +85,8 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated0
         // ...
-        int num = 0;
-        while (num <= 100)
-        {
-            num += 1;
-            
-            if (num< 50)
-            {
-                sunx -= 10;
-                suny += 4;
-                sun.update(sunx,suny);
-                repaint();
-            }
-            else
-            {
-                sunx -= 10;
-                suny -= 4;
-                sun.update(sunx,suny);
-                repaint();
-            }
-        }
+        n += 1;
+        sun.update(n);
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         repaint();

@@ -15,7 +15,7 @@ public class CityscapeViewer
 {
     // the cityscape will be animated for 60 seconds
     static final int ANIMATION_TIME_IN_SECONDS = 60;
-   
+    static private int weather;
     /**
      * main method for the program which creates and configures the frame for the program
      *
@@ -34,8 +34,10 @@ public class CityscapeViewer
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
          Scanner scan = new Scanner(System.in);
+         
          System.out.print ("How many cloud do you want in the sky? : ");
-         int weather = scan.nextInt();
+         weather = scan.nextInt();
+       
         
         
         
