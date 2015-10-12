@@ -12,7 +12,10 @@ public class Cloud
     private int ypos;
     private int ra;
     private int weather;
-
+    private int numx;
+    private int numy;
+    private int num;
+     Random rand = new Random();
     /**
      * Constructor for objects of class Cloud
      */
@@ -20,6 +23,7 @@ public class Cloud
     {
         // initialise instance variables
         weather = weat;
+        num = 0;
         ra = 30;
     }
 
@@ -33,10 +37,9 @@ public class Cloud
     {
         // put your code here
 
-       int num = 0;
-       Random rand = new Random();
-       int numx;
-       int numy;
+       
+      
+
 
        while (num < weather)
        {
